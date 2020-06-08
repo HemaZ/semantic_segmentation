@@ -15,7 +15,7 @@ class MinimalSubscriber(Node):
         super().__init__('semantic_segmentation')
         self.subscription = self.create_subscription(
             Image,
-            '/ImagePubSubTopic',
+            '/camera',
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
